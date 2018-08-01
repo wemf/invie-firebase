@@ -114,6 +114,20 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBp5yCGHYCeKyqdYoGTSN42QXJYiKbduRs",
+        authDomain: "invie-platzi-c1b57.firebaseapp.com",
+        databaseURL: "https://invie-platzi-c1b57.firebaseio.com",
+        projectId: "invie-platzi-c1b57",
+        storageBucket: "invie-platzi-c1b57.appspot.com",
+        messagingSenderId: "220602810354"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/index.js"></script>
     <script>
       var consulta = window.matchMedia('(max-width: 500px)');
       consulta.addListener(mediaQuery);
