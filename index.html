@@ -3,7 +3,7 @@
   <head>
     <title>Invie - tus mejores guitarras!!</title>
     <meta charset="utf-8"/>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/invie.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
@@ -19,6 +19,9 @@
           <ul>
             <li>
               <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#" id="btnLogin">Iniciar Sesion</a>
             </li>
             <li>
               <a href="#guitarras">Guitarras</a>
@@ -106,7 +109,7 @@
           </div>
           <div class="col2">
             <label for="comentarios">Comentarios</label>
-            <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
+            <textarea name="comantarios" id="comentarios_text" cols="30" rows="7"></textarea>
             <input type="submit" value="Enviar" class="button"/>
           </div>
         </form>
@@ -114,7 +117,8 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
     <script>
       // Initialize Firebase
       var config = {
@@ -147,12 +151,10 @@
       function mediaQuery() {
         if (consulta.matches) {
           // si se cumple hagamos esto
-          console.log('se cumplió la condicion');
           $burguerButton.addEventListener('touchstart', toggleMenu);
         } else {
           $burguerButton.removeEventListener('touchstart', toggleMenu);
           // si no se cumple hagamos esto
-          console.log('no se cumplió la condicion');
         }
       }
       mediaQuery();
