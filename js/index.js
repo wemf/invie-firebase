@@ -21,8 +21,8 @@ btnLogout.addEventListener('click', (evt) => {
 
 btnLogin.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    const provider = new firebase.auth.FacebookAuthProvider();
+    provider.addScope('public_profile');
     firebase.auth().signInWithPopup(provider).then((data) => {
         btnLogin.style.display = 'none';
         btnLogout.style.display = 'block';
