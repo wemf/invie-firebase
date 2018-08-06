@@ -182,12 +182,6 @@ input:focus, textarea:focus {
   margin-left: 30px;
 }
 
-.menu li:before{
-  content: '∘';
-  font-size: 50px;
-  line-height: 20px;
-  color: white;
-}
 
 .menu a {
   color: white;
@@ -520,20 +514,14 @@ input:focus, textarea:focus {
 
   .menu ul {
     flex: 1;
+    list-style-type: none;
   }
   .menu li {
     display: block;
     margin: 0;
     padding: 8px 0;
     border-bottom: 1px solid white;
-  }
-
-  .menu li:before {
-    display: none;
-  }
-
-  .menu li:first-child {
-    border-top: 1px solid white;
+    list-style-type: none;
   }
   .portada {
     text-align: center;
@@ -589,9 +577,9 @@ video {
   height: 100%;
 }
 
-
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .background {
     background-image: url('../images/background2x.png');
   }
 }
+
