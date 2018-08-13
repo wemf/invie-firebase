@@ -4,7 +4,7 @@ var nombre = document.getElementById("nombre");
 var precio = document.getElementById("precio");
 var descripcion = document.getElementById("descripcion");
 var tipo = document.getElementById("tipo");
-var imagen = document.getElementById("imagen");
+var img = document.getElementById("img");
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user){
@@ -21,7 +21,8 @@ function nuevaGuitarra() {
         nombre: nombre.value,
         descripcion: descripcion.value,
         tipo: tipo.value,
-        precio: precio.value
+        precio: precio.value,
+        img: img.value
     }
     if (object.tipo !== "normal" && object.tipo !== "vip") {
         alert("El tipo debe ser normal o vip");
