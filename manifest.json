@@ -1,0 +1,25 @@
+{
+    "short_name": "AirGuitar",
+    "name": "Esto es un Ejemplo de WepApp",
+    "theme_color": "#2196F3",
+    "background_color": "#2196F3",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-48x48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/icons/android-chrome-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": "index.html?launcher=true"
+}
